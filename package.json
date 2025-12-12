@@ -1,4 +1,11 @@
 {
+  "name": "medique-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node backend/src/index.js",
+    "postinstall": "cd backend && npm ci"
+  },
   "dependencies": {
     "dotenv": "^17.2.3",
     "pg": "^8.16.3"

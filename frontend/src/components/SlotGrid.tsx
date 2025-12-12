@@ -1,5 +1,3 @@
-import React from "react";
-
 type Slot = {
   id: string;
   slot_time: string;

@@ -170,24 +170,4 @@ export default function DoctorPage() {
     </div>
   );
   
-    async function handleSelect(s: any) {
-      setSelected(s);
-      // If doctor and slot has a booking request, allow accept/decline
-      if (user && user.user_type === 'doctor' && s.booking_id) {
-        const ok = confirm(`Accept booking by ${s.patient_name} at ${new Date(s.slot_time).toLocaleString()}? Press Cancel to decline.`);
-        const action = ok ? 'accept' : 'decline';
-        const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:4000'}/bookings/${s.booking_id}`, {
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
-          body: JSON.stringify({ action }),
-        });
-        const data = await res.json();
-        if (res.ok) {
-          alert('Response saved');
-          await load();
-        } else {
-          alert(data.error || 'Failed to respond');
-        }
-      }
-    }
 }

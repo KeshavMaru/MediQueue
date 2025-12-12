@@ -1,0 +1,75 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log
+.pnpm-debug.log*
+dist/
+build/
+.env
+.env.example
+.env.local
+.env.*.local
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+.eggs/
+.python-version
+.env
+.ipynb_checkpoints/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+out/
+.gradle/
+build/
+
+# Mac / Windows / Linux
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+logs/
+*.log
+
+# Temp
+tmp/
+temp/
+*.tmp
+*.swp
+
+# Git LFS pointer files (if using LFS)
+*.psd
+*.png
+*.jpg
+*.h5
+*.pt
+
+# Misc
+coverage/
+coverage-final.json
+.nyc_output/
+report/
